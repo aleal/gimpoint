@@ -1,8 +1,6 @@
 # Bootcamp 2019 - Gympoint
 
-## Backend
-
-### Setup and run
+## Setup and run
 
 ```shell
 yarn
@@ -11,7 +9,7 @@ yarn sequelize db:seed:all
 yarn dev
 ```
 
-### Routes
+## Routes
 
 | Path          | Method | Description                               | Body JSON fields                                                                  | Authentication Required |
 | ------------- | :----: | ----------------------------------------- | --------------------------------------------------------------------------------- | ----------------------- |
