@@ -5,6 +5,7 @@
 ### Setup and run
 
 ```shell
+cd backend
 yarn
 yarn sequelize db:migrate
 yarn sequelize db:seed:all
