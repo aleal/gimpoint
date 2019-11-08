@@ -1,8 +1,14 @@
-export default validator => {
+export default inputValidator => {
   return (req, res, next) => {
-    validator()
-      .validate(req.body)
-      .then(() => next())
-      .catch(e => res.status(400).json(e));
+    if (inputValidator) {
+      inputValidator()
+        .validate(req.body)
+        .then(() => {
+          return next();
+        })
+        .catch(e => res.status(400).json({ error: e.message }));
+    } else {
+      next();
+    }
   };
 };
